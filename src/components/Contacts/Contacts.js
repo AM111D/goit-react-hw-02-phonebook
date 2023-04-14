@@ -1,14 +1,18 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
 
-const Contacts = ({ contacts }) => {
+const Contacts = ({ contacts, filter }) => {
   return (
     <ul>
-      {contacts.map(contact => (
-        <li key={nanoid()}>
-          {contact.name}: {contact.number}
-        </li>
-      ))}
+      {contacts
+        .filter(contact =>
+          contact.name.toLowerCase().includes(filter.toLowerCase())
+        )
+        .map(contact => (
+          <li key={nanoid()}>
+            {contact.name}: {contact.number}
+          </li>
+        ))}
     </ul>
   );
 };
