@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from './Form/Form';
+import ContactForm from './Form/ContactForm';
 import Contacts from './Contacts/Contacts';
 import { nanoid } from 'nanoid';
 import Filter from './Filter/Filter';
@@ -16,7 +16,7 @@ class App extends Component {
       ],
       filter: '',
     };
-    this.handleFilter = this.handleFilter.bind(this);
+    // this.handleFilter = this.handleFilter.bind(this);
   }
 
   addContact = data => {
@@ -44,8 +44,8 @@ class App extends Component {
     const { filter } = this.state;
     return (
       <div>
-        <h1>Phonebook</h1>
-        <Form onSubmit={this.addContact} />
+        <h1 style={{ marginLeft: 20 }}>Phonebook</h1>
+        <ContactForm onSubmit={this.addContact} />
         <Filter value={filter} onChange={this.handleFilter} />
         <Contacts contacts={this.filteredContacts()} filter={filter} />
       </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import css from './filter.module.css';
 
 class Filter extends Component {
   handleChange = e => {
@@ -10,8 +11,9 @@ class Filter extends Component {
     const { value } = this.props;
     return (
       <div>
-        <label htmlFor="search">Search:</label>
+        {/* <label htmlFor="search">Search:</label> */}
         <input
+          className={css.formSearch}
           type="text"
           id="search"
           value={value}
