@@ -2,7 +2,13 @@
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 4px;
-    width: 325px;
+    width: 375px;
     margin-bottom: 20px;
-    margin-top: 40px;
+    margin-top: 15px;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
 }

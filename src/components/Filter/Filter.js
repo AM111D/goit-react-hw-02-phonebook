@@ -10,8 +10,9 @@ class Filter extends Component {
   render() {
     const { value } = this.props;
     return (
-      <div>
+      <div className={css.search}>
         {/* <label htmlFor="search">Search:</label> */}
+        <span>Find contacts by name</span>
         <input
           className={css.formSearch}
           type="text"

@@ -12,9 +12,14 @@ class ContactForm extends Component {
   nameInputId = nanoid();
   numberInputId = nanoid();
 
+  
+
   collectionInfo = event => {
     const { name, value } = event.currentTarget;
-
+    
+    // if (this.state.name || this.state.number) {
+    //   console.log('kyky');
+    // }
     this.setState({
       [name]: value,
     });
@@ -22,7 +27,6 @@ class ContactForm extends Component {
 
   submitForm = e => {
     e.preventDefault();
-
     this.props.onSubmit(this.state);
 
     this.reset();
