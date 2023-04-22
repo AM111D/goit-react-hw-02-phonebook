@@ -5,9 +5,8 @@ import { nanoid } from 'nanoid';
 import Filter from './Filter/Filter';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+
+    state = {
       contacts: [
         { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
         { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
@@ -17,7 +16,7 @@ class App extends Component {
       filter: '',
     };
     // this.handleFilter = this.handleFilter.bind(this);
-  }
+  
 
   addContact = data => {
     const newContact = Object.assign({}, data, { id: nanoid() });

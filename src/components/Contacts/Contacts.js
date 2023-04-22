@@ -1,6 +1,7 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
 import css from './contacts.module.css'
+import PropTypes from 'prop-types';
 
 const Contacts = ({ contacts, filter, ondeletContact }) => {
   return (
@@ -20,3 +21,15 @@ const Contacts = ({ contacts, filter, ondeletContact }) => {
 };
 
 export default Contacts;
+
+Contacts.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  filter: PropTypes.string.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
+};

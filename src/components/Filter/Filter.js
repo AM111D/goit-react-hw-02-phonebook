@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import css from './filter.module.css';
+import PropTypes from 'prop-types';
 
 class Filter extends Component {
   handleChange = e => {
@@ -26,3 +27,8 @@ class Filter extends Component {
 }
 
 export default Filter;
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  };
